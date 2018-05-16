@@ -175,7 +175,8 @@ a {
 /* TITLE */
 
 .banner__title,
-.skills__title {
+.skills__title,
+.about__title {
   position: relative;
   padding-bottom: 20px;
   margin-bottom: 30px;
@@ -183,7 +184,8 @@ a {
 }
 
 .banner__title::before,
-.skills__title::before {
+.skills__title::before,
+.about__title::before {
   position: absolute;
   top: 100%;
   left: 50%;
@@ -202,8 +204,12 @@ a {
   text-transform: uppercase;
 }
 
+/* BUTTON LINK */
+
 .bunner__link:link,
-.bunner__link:visited {
+.bunner__link:visited,
+.about__link:link,
+.about__link:visited {
   display: inline-block;
   padding: 10px;
   background-color: #2b98f0;
@@ -213,19 +219,21 @@ a {
   transition: .3s;
 }
 
-.bunner__link:hover {
+.bunner__link:hover,
+.about__link:hover {
   background-color: #f5f5f5;
   color: #2b98f0;
 }
 
-.bunner__link:active {
+.bunner__link:active,
+.about__link:active {
   background-color: #005499;
   color: #f5f5f5;
 }
 
 /* MEDIA HEADER */
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 769px) {
   .nav-main {
     display: flex;
     flex-direction: row;
@@ -272,17 +280,22 @@ a {
   padding: 40px 20px;
 }
 
-.skills__title {
+/* TTILE SKILLS, ABOUT */
+
+.skills__title,
+.about__title {
   margin-bottom: 40px;
   text-align: center;
   cursor: pointer;
 }
 
-.skills__title::before {
+.skills__title::before,
+.about__title::before {
   transition: .4s;
 }
 
-.skills__title:hover::before {
+.skills__title:hover::before,
+.about__title:hover::before {
   width: 100%;
   background-color: #ff5d00;
 }
@@ -381,3 +394,74 @@ a {
     min-height: 330px;
   }
 } */
+
+/* --------------------------------------- */
+/* ABOUT */
+/* --------------------------------------- */
+
+.about {
+  min-height: 100vh;
+  padding: 40px 0;
+  background-color: #9ad2ff;
+}
+
+.about__description {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.about__text {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.about__text::first-letter {
+  padding-left: 15px;
+}
+
+.about__link {
+  text-align: center;
+}
+
+.about__video {
+  width: 100%;
+}
+
+/* MEDIA ABOUT */
+
+@media screen and (min-width: 560px) {
+  .about__video {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .about__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about__text {
+    flex: 1 1 auto;
+    margin-right: 20px;
+  }
+
+  .about__video {
+    flex: 1 0 50%;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 910px) {
+  .about__video {
+    flex: 1 0 40%;
+  }
+
+  .about__text {
+    width: 80%;
+  }
+}
